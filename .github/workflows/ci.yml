@@ -15,4 +15,6 @@ jobs:
               with: 
                     node-version: "21" #specifies the version of node js to be used in the environment
 
+            - name: "Check node version" 
+              run : node --version #checks the version of node js installed in the environment
             
