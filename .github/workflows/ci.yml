@@ -17,8 +17,7 @@ jobs:
                    
             - name: "Check node version" 
               run : node --version #checks the version of node js installed in the environment
-            
-            
+        
             - name: "Clone the repository"
               uses: actions/checkout@v3 #In this case we are using checkout action to clone the repository 
 
@@ -27,6 +26,9 @@ jobs:
 
             - name: "List directories"
               run: ls #lists the files in the current directory to verify that the repository has been cloned successfully
+
+            - name: "Run linting"
+              run: npm run lint
 
             - name: "Run tests"
               run: npm test #runs the tests specified in the package.json file
