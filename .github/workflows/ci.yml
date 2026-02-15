@@ -21,3 +21,6 @@ jobs:
             
             - name: "Clone the repository"
               uses: actions/checkout@v3 #In this case we are using checkout action to clone the repository 
+
+            - name: "Install dependencies"
+              run: npm install #installs the dependencies specified in package.json file
