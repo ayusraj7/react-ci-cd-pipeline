@@ -24,3 +24,12 @@ jobs:
 
             - name: "Install dependencies"
               run: npm install #installs the dependencies specified in package.json file
+
+            - name: "List directories"
+              run: ls #lists the files in the current directory to verify that the repository has been cloned successfully
+
+            - name: "Run tests"
+              run: npm test #runs the tests specified in the package.json file
+
+            - name: "Build the application"
+              run: npm run build 
