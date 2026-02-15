@@ -13,8 +13,8 @@ jobs:
             - name: "Setup Node JS"
               uses: actions/setup-node@v4 #uses: tells us to use which action, in this case we are using setup-node action to setup node js environment
               with: 
-                    node-version: "21" #specifies the version of node js to be used in the environment
-
+                    node-version: "24" #specifies the version of node js to be used in the environment
+                   
             - name: "Check node version" 
               run : node --version #checks the version of node js installed in the environment
             
