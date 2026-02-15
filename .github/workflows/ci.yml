@@ -35,3 +35,9 @@ jobs:
 
             - name: "Build the application"
               run: npm run build 
+            
+            - name: "Upload production-ready build files"
+              uses: actions/upload-artifact@v3
+              with:
+                name: build
+                path: /dist #specifies the path to the build files that we want to upload as an artifact
