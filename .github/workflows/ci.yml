@@ -1,0 +1,18 @@
+name: "Sample React CI Pipeline / Workflow"
+
+on: 
+    push: 
+        branches: 
+            - master
+            - main
+
+jobs:
+    build-and-test: 
+        runs-on: ubuntu-latest
+        steps: 
+            - name: "Setup Node JS"
+              uses: actions/setup-node@v4 #uses: tells us to use which action, in this case we are using setup-node action to setup node js environment
+              with: 
+                    node-version: "21" #specifies the version of node js to be used in the environment
+
+            
