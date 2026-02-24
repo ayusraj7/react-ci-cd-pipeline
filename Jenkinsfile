@@ -28,6 +28,12 @@ pipeline {
             }
         }
 
+        stage ('Take approval') {
+            steps {
+                input message: 'Do you want to proceed with the deployment?', ok: 'Deploy'
+            }
+        }
+
         stage('Build React App') {
             steps {
                 bat 'echo ===== Checking Node and NPM Versions ====='
