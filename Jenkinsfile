@@ -40,17 +40,13 @@ pipeline {
             }
         }
 
-        stage ('Deploy') {
-            agent any {
-                label 'windows'
-            }
-
+        stage('Deploy') {
             steps {
                 bat 'echo ===== Deploying React App ====='
-                // Add deployment commands here, e.g., copying files to a server
                 bat 'npm install -g vercel'
             }
         }
+
     }
 
     post {
