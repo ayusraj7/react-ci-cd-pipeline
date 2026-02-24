@@ -6,8 +6,10 @@ pipeline {
             steps {
                 bat '''
                     node --version
+                    ls 
                     npm install
                     npm run build
+                    ls
                 '''
             }
         }
