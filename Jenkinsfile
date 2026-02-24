@@ -25,7 +25,7 @@ pipeline {
 
         stage('Build React App') {
             steps {
-                bat 'echo ===== Checking Node & NPM Versions ====='
+                bat 'echo ===== Checking Node and NPM Versions ====='
                 bat 'node --version'
                 bat 'npm --version'
 
