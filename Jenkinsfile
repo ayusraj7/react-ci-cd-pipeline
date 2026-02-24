@@ -4,20 +4,18 @@ pipeline {
     stages {
         stage('Build React App') {
             steps {
-                bat '''
-                    echo ===== Checking Versions =====
-                    node --version
-                    npm --version
+                bat 'echo ===== Checking Versions ====='
+                bat 'node --version'
+                bat 'npm --version'
 
-                    echo ===== Installing Dependencies =====
-                    npm install
+                bat 'echo ===== Installing Dependencies ====='
+                bat 'npm install'
 
-                    echo ===== Building Project =====
-                    npm run build
+                bat 'echo ===== Building Project ====='
+                bat 'npm run build'
 
-                    echo ===== Listing Files =====
-                    dir
-                '''
+                bat 'echo ===== Listing Files ====='
+                bat 'dir'
             }
         }
     }
