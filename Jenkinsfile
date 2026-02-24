@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        MY_VAR = 'my value'
+    }
+
     options {
         skipDefaultCheckout(true)
     }
@@ -44,6 +48,7 @@ pipeline {
             steps {
                 bat 'echo ===== Deploying React App ====='
                 bat 'npm install -g vercel'
+                bat 'echo %MY_VAR%'
             }
         }
 
