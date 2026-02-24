@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         MY_VAR = 'my value'
+        VERCEL_TOKEN = credentials('VERCEL_TOKEN')
     }
 
     options {
@@ -49,6 +50,7 @@ pipeline {
                 bat 'echo ===== Deploying React App ====='
                 bat 'npm install -g vercel'
                 bat 'echo %MY_VAR%'
+                bat "vercel --prod --token %VERCEL_TOKEN% --yes --name=cicdproject"
             }
         }
 
