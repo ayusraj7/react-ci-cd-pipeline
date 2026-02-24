@@ -2,14 +2,15 @@ pipeline {
     agent any
 
     stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+
         stage('Build React App') {
             steps {
-                step('clean up workspace') {
-                    cleanWs()
-                }
-
-                step('Build Project') {
-                  bat 'echo ===== Checking Versions ====='
+                bat 'echo ===== Checking Versions ====='
                 bat 'node --version'
                 bat 'npm --version'
 
@@ -21,7 +22,6 @@ pipeline {
 
                 bat 'echo ===== Listing Files ====='
                 bat 'dir'
-                }
             }
         }
     }
